@@ -22,7 +22,7 @@ public class UI {
 			System.out.print("-");
 		}
 		else {
-			System.out.println(pieces);
+			System.out.print(pieces);
 		}
 		System.out.print(" ");
 	}
