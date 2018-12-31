@@ -102,6 +102,30 @@ public class ChessMatch {
 			piecesOnTheBoard.add(capturedPiece);
 		}
 		
+		
+		
+		// #specialmove castling kingside rook
+				if (p instanceof King && target.getColum() == source.getColum() + 2) {
+					Position sourceT = new Position(source.getRow(), source.getColum() + 3);
+					Position targetT = new Position(source.getRow(), source.getColum() + 1);
+					ChessPiece rook = (ChessPiece)board.removePiece(sourceT);
+					board.placePiece(rook, targetT);
+					rook.increaseMoveCount();
+				}
+
+				// #specialmove castling queenside rook
+				if (p instanceof King && target.getColum() == source.getColum() - 2) {
+					Position sourceT = new Position(source.getRow(), source.getColum() - 4);
+					Position targetT = new Position(source.getRow(), source.getColum() - 1);
+					ChessPiece rook = (ChessPiece)board.removePiece(sourceT);
+					board.placePiece(rook, targetT);
+					rook.increaseMoveCount();
+				}		
+
+		
+		
+		
+		
 		return capturedPiece;
 	}
 	
@@ -117,6 +141,29 @@ public class ChessMatch {
 		piecesOnTheBoard.add(capturedPiece);
 		
 		}
+		
+		
+		// #specialmove castling kingside rook
+		if (p instanceof King && target.getColum() == source.getColum() + 2) {
+			Position sourceT = new Position(source.getRow(), source.getColum() + 3);
+			Position targetT = new Position(source.getRow(), source.getColum() + 1);
+			ChessPiece rook = (ChessPiece)board.removePiece(target);
+			board.placePiece(rook, source);
+			rook.decreaseMoveCount();
+		}
+
+		// #specialmove castling queenside rook
+		if (p instanceof King && target.getColum() == source.getColum() - 2) {
+			Position sourceT = new Position(source.getRow(), source.getColum() - 4);
+			Position targetT = new Position(source.getRow(), source.getColum() - 1);
+			ChessPiece rook = (ChessPiece)board.removePiece(target);
+			board.placePiece(rook, source);
+			rook.decreaseMoveCount();
+		}		
+
+		
+		
+		
 		
 		
 		
@@ -213,6 +260,12 @@ public class ChessMatch {
 		board.placePiece(piece, new ChessPosition(column, row).toPosition());
 		piecesOnTheBoard.add(piece);
 	}
+	
+	
+	
+	
+	
+	
 	
 	
 	private void initialSetup() {
