@@ -2,6 +2,8 @@ package boardgame;
 
 public class Board {
 
+	//Manipulation of the Board
+	
 	private int rows;
 	private int columns;
 	private Piece[][] pieces;
