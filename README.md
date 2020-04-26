@@ -1,5 +1,5 @@
-## Chess Game Made Entirely In Java
+## Jogo de Xadrez complexo executado totalmente via terminal
 
-Project of a game of chess which was made to be executed and fully functional by the shell. With rounds, players, scores, pieces, pieces captured.
+Projeto de um jogo de xadrez feito para ser executado e totalmente funcional pelo terminal. Com rodadas, jogadores, pontuações, peças, peças capturadas.
 
-![Project Photo](https://github.com/ArildoMagno/2d-Chess-Game-Java/blob/master/project.png)
+![Print do projeto](https://github.com/ArildoMagno/2d-Chess-Game-Java/blob/master/project.png)
